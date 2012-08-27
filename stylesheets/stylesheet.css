@@ -74,8 +74,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 36px;
+  font-size: 3em;
+  line-height: 1.1;
   font-weight: 700;
+  margin-bottom: 0.7em;
 }
 
 h2 {
@@ -377,6 +379,10 @@ Full-Width Styles
   background: #212121;
 }
 
+img.disqus {
+  width: 71px !important;
+  margin: 0;
+}
 
 
 /*******************************************************************************

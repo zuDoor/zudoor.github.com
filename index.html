@@ -10,6 +10,26 @@
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
+    <script>
+      var disqus_shortname = 'zudoor'; 
+      window.disqus = document.createElement('div');
+      disqus.id = 'disqus_thread';
+      function get_disqus(evt) {
+        if (disqus.innerHTML) {
+          disqus.innerHTML = '';
+          return;
+        }
+        evt.target.parentNode.parentNode.appendChild(disqus);
+        var disqus_url = 'http://zudoor.github.com'+ evt.target.name ;
+        (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript';
+          dsq.async = true;
+          dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      }
+
+    </script>
     <title>組道</title>
   </head>
 
@@ -32,11 +52,14 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         {% for post in site.posts %}
-        <strong style="float:right"> {{ post.date | date_to_string }} </strong>
-        {{ post.content }}
-        <br/>
-        <br/>
-        <br/>
+        <div class="posts">
+          <strong style="float:right"> {{ post.date | date_to_string }} </strong>
+          {{ post.content }}
+          <br/>
+          <button onclick="get_disqus(evt)" name="{{ post.url }}"><img src="http://mediacdn.disqus.com/1345846826/images/embed/disqus-logo-noborder.png" class="disqus" ></img></button>
+          <br/>
+          <br/>
+        </div>
         {% endfor %}
       </section>
     </div>
