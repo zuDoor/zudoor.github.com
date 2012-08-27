@@ -102,6 +102,7 @@ h6 {
 
 p {
   margin: 10px 0 15px 0;
+  font-size: large;
 }
 
 footer p {
@@ -164,7 +165,7 @@ pre, code {
   background-color: #fff;
 
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
-  font-size: 14px;
+  font-size: large;
 
   border-radius: 2px;
   -moz-border-radius: 2px;
@@ -184,7 +185,7 @@ pre {
 code {
   padding: 3px;
   margin: 0 3px;
-  box-shadow: 0 0 10px rgba(0,0,0,.1);
+  box-shadow: 0 0 15px rgba(0,0,0,.2);
 }
 
 pre code {
